@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Container, Nav, Navbar as NavbarBs, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { useShoppingCart } from "../context/ShoppingCartContext";
@@ -57,4 +58,14 @@ export function Navbar() {
       </Container>
     </NavbarBs>
   );
+}
+
+
+export function ResponsiveNavbar() {
+  const { openCart, cartQuantity } = useShoppingCart();
+  return <Fragment>
+    <div className="container">
+      <div className="">All</div>
+    </div>
+  </Fragment>
 }
